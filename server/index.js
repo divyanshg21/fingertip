@@ -26,9 +26,9 @@ app.use('/', Router)
 
 // serving the front-end
 const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, "./client/build")))
+app.use(express.static(path.join(__dirname, "../client/build")))
 app.get("*", function (_, res) {
-    res.sendFile(path.join(__dirname, "./client/build/index.html"), function (err) {
+    res.sendFile(path.join(__dirname, "index.html"), function (err) {
         res.status(500).send(err)
     })
 })
